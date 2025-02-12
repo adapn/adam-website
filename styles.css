@@ -1,0 +1,342 @@
+/* General Body Styling */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Ctext x='10' y='60' font-family='Arial' font-size='30' fill='rgba(100,100,100,0.25)' transform='rotate(-45 75 75)'%3Emew%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 120px 120px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Trade Offer Section Enhancements */
+.trade {
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+/* Pulsing Animation for Attention */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 20px rgba(255, 69, 0, 0.9);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1000px;
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Valentine's Text */
+.valentine-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #d6336c;
+}
+
+/* Button Styling */
+.btn {
+    padding: 60px 110px;
+    font-size: 30px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-yes {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-yes:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-no {
+    background-color: #dc3545;
+    color: white;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.btn-no:hover {
+    background-color: #c82333;
+    transform: scale(1);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 10px 0;
+}
+
+/* Trade Details Section */
+.trade-details {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1400px;
+    gap: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/* Trade Cards */
+.you-receive, .i-receive {
+    flex: 1;
+    padding: 20px;
+    border: 2px dashed #ff4500;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 45%;
+    max-width: 48%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.you-receive:hover, .i-receive:hover {
+    transform: scale(1.05);
+    background-color: #ffe5d9;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Gallery */
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.media-item {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.media-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Falling Hearts */
+.heart {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall 3s ease-in forwards;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 1;
+    color: rgba(100, 100, 100, 0.25);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Centering "YOU :)" */
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+}
+
+/* Text Styling */
+.trade-details h2 {
+    font-size: 28px;
+    color: #d6336c;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.trade-details p {
+    font-size: 28px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cycle Image Styling */
+.cycle-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 900px;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+/* Hover Effect for "lots of smitskis forever and ever :)" */
+.you-receive p {
+    transition: color 0.3s ease, transform 0.2s ease;  /* Smooth transition */
+    cursor: pointer;  /* Indicates it's interactive */
+}
+
+.you-receive p:hover {
+    color: green;      /* Turns text green on hover */
+    transform: scale(1.05);  /* Slight pop effect */
+}
+/* Add Large Gap Before Valentine's Section */
+#valentines-section {
+    margin-top: 10000px;  /* Adjust this value to increase the gap */
+    margin-bottom: 500px;
+}
+
+
+
+/* Home Icon Styling */
+#home-icon {
+    position: fixed;           /* Keeps the icon fixed at the top-left */
+    top: 20px;                 /* Distance from the top */
+    left: 20px;                /* Distance from the left */
+    z-index: 1000;             /* Ensures it's above all content */
+    cursor: pointer;           /* Makes it look clickable */
+    transition: transform 0.4s ease-in-out; /* Smooth hover scaling */
+}
+
+/* Make the Icon Bigger */
+#home-icon img {
+    width: 80px;               /* Increased size */
+    height: 80px;              /* Maintain square shape */
+    border-radius: 50%;        /* Optional: makes it circular */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.4s ease-in-out;   /* Smooth hover animation */
+}
+
+/* Hover Effect */
+#home-icon:hover img {
+    transform: scale(1.2) rotate(10deg);  /* Slight zoom + tilt for fun effect */
+}
+
+/* Countdown Section Styling */
+.countdown-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 80px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1000px;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+/* Countdown Timer Styling */
+#countdown-timer {
+    font-size: 36px;
+    color: #d6336c;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Fun Hover Effect */
+.countdown-section:hover {
+    transform: scale(1.05);
+}
+
